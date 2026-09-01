@@ -1,6 +1,6 @@
-const WHATSAPP_NUMBER = '5511999999999'
+const WHATSAPP_NUMBER = '5511959300137'
 const WHATSAPP_MSG = encodeURIComponent('Oi, Geovana! Vi seu portfólio e quero um site pra minha campanha.')
-const EMAIL = 'contato@geovanapederneschi.dev'
+const EMAIL = 'geovanapederneschi@gmail.com'
 
 export default function Contact() {
   return (

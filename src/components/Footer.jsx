@@ -8,9 +8,19 @@ export default function Footer() {
           </div>
           <span className="text-white/50 text-sm">Geovana Pederneschi — Sites de campanha</span>
         </div>
-        <p className="text-white/30 text-xs">
-          Todos os candidatos exibidos neste portfólio são fictícios, exceto quando indicado.
-        </p>
+        <div className="flex flex-col items-center sm:items-end gap-1.5">
+          <a
+            href="https://github.com/GeovanaPederneschi/portifolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/50 hover:text-white text-xs font-semibold transition-colors duration-200"
+          >
+            Ver todos os projetos no portfólio completo ↗
+          </a>
+          <p className="text-white/30 text-xs">
+            Todos os candidatos exibidos neste portfólio são fictícios, exceto quando indicado.
+          </p>
+        </div>
       </div>
     </footer>
   )

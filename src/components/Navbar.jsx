@@ -46,6 +46,14 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="https://github.com/GeovanaPederneschi/portifolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/50 hover:text-white text-sm font-medium transition-colors duration-200"
+          >
+            Portfólio completo ↗
+          </a>
+          <a
             href="#contato"
             className="bg-gradient-to-r from-[#6D5AE0] to-[#FF6B4A] text-white text-sm font-bold px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity duration-200 shadow-lg shadow-[#6D5AE0]/20"
           >
@@ -76,6 +84,15 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://github.com/GeovanaPederneschi/portifolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="block px-8 py-3.5 text-white/70 hover:text-white hover:bg-white/5 text-sm font-medium border-b border-white/5 transition-colors"
+          >
+            Portfólio completo ↗
+          </a>
           <div className="px-8 py-4">
             <a
               href="#contato"
