@@ -11,6 +11,7 @@ const projetos = [
     nome: 'Carlos Mendes',
     pauta: 'Modelo base da campanha',
     texto: 'O template original: hero clássico, cadastro de apoiadores e gerador de foto lado a lado com o candidato.',
+    demo: 'https://lading-page-candidato.vercel.app',
     repo: 'https://github.com/GeovanaPederneschi/lading-page-candidato',
   },
   {
@@ -25,6 +26,7 @@ const projetos = [
     nome: 'Bianca Ferraz',
     pauta: 'Pauta: Proteção Animal',
     texto: 'Mural de campo com recados fixados, washi tape e varal de conquistas — tudo com clima de causa.',
+    demo: 'https://site-canditado-animais.vercel.app',
     repo: 'https://github.com/GeovanaPederneschi/site-canditado-animais',
   },
   {
@@ -32,6 +34,7 @@ const projetos = [
     nome: 'Marcos Teixeira',
     pauta: 'Pauta: Segurança Pública',
     texto: 'Tema tático com radar animado, scanlines e dossiê interativo de propostas — sem nenhuma imagem de arma.',
+    demo: 'https://site-canditado-arma.vercel.app',
     repo: 'https://github.com/GeovanaPederneschi/site-canditado-arma',
   },
   {
@@ -39,6 +42,7 @@ const projetos = [
     nome: 'Luiza Amaral',
     pauta: 'Pauta: Meio Ambiente',
     texto: 'Cosmos escuro com globo 3D animado em CSS puro e campo de partículas — "Planeta Vivo".',
+    demo: 'https://site-canditado-ambientalista.vercel.app',
     repo: 'https://github.com/GeovanaPederneschi/site-canditado-ambientalista',
   },
   {
@@ -46,6 +50,7 @@ const projetos = [
     nome: 'Paulo Vasconcelos',
     pauta: 'Pauta: Educação',
     texto: 'Lousa e caderno: post-its coloridos, giz animado e um boletim escolar com a trajetória do candidato.',
+    demo: 'https://site-canditado-educacao.vercel.app',
     repo: 'https://github.com/GeovanaPederneschi/site-canditado-educacao',
   },
 ]
@@ -72,33 +77,49 @@ export default function Portfolio() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projetos.map((p) => (
-            <a
+            <div
               key={p.nome}
-              href={p.repo}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group glass rounded-2xl overflow-hidden hover:bg-white/[0.06] transition-colors duration-200"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-[#14141F]">
-                <img
-                  src={p.img}
-                  alt={`Preview do site de ${p.nome}`}
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
+              <a href={p.demo ?? p.repo} target="_blank" rel="noopener noreferrer">
+                <div className="aspect-[4/3] overflow-hidden bg-[#14141F]">
+                  <img
+                    src={p.img}
+                    alt={`Preview do site de ${p.nome}`}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </a>
               <div className="p-6">
                 <span className="text-[#FF6B4A] text-[11px] font-bold uppercase tracking-widest">
                   {p.pauta}
                 </span>
                 <h3 className="font-display font-bold text-lg text-white mt-1.5 mb-2">{p.nome}</h3>
                 <p className="text-white/50 text-sm leading-relaxed mb-4">{p.texto}</p>
-                <span className="inline-flex items-center gap-1.5 text-white/70 text-xs font-semibold group-hover:text-white transition-colors">
-                  Ver código no GitHub
-                  <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
-                </span>
+                <div className="flex items-center gap-4">
+                  <a
+                    href={p.demo ?? p.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-white/70 text-xs font-semibold hover:text-white transition-colors"
+                  >
+                    {p.demo ? 'Ver site' : 'Ver código'}
+                    <span>→</span>
+                  </a>
+                  {p.demo && (
+                    <a
+                      href={p.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/40 text-xs font-medium hover:text-white/70 transition-colors"
+                    >
+                      Código
+                    </a>
+                  )}
+                </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
 

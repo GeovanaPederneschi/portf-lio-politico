@@ -46,7 +46,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://github.com/GeovanaPederneschi/portifolio"
+            href="https://portifolio-pi-ten-82.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/50 hover:text-white text-sm font-medium transition-colors duration-200"
@@ -85,7 +85,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://github.com/GeovanaPederneschi/portifolio"
+            href="https://portifolio-pi-ten-82.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}

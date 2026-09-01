@@ -10,7 +10,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col items-center sm:items-end gap-1.5">
           <a
-            href="https://github.com/GeovanaPederneschi/portifolio"
+            href="https://portifolio-pi-ten-82.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/50 hover:text-white text-xs font-semibold transition-colors duration-200"
